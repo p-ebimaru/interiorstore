@@ -1,0 +1,351 @@
+@charset "UTF-8";
+
+html {
+  font-size: 100%;
+}
+
+
+body {
+  font-size: 0.75rem;
+  max-width: 1360px;
+  padding: 0 40px;
+  margin: 0 auto;
+  color:#333333;
+  
+}
+
+img {
+  max-width: 100%;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  color:#333333;
+  text-decoration: none;
+  transition: all 0.5s;
+}
+
+a:hover {
+  opacity: 0.7;
+}
+
+/* ヘッダー */
+header {
+  width: 100%;
+  height: 80px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background:  white;
+  position: fixed;
+  right: 0;
+  left: 0;
+}
+
+.site-title {
+  position: fixed;
+  left: 120px;
+}
+
+.menu {
+  position: fixed;
+  right: 120px;
+}
+
+
+.site-title a {
+  width: 180px;
+  line-height: 1px;
+  display: block;
+}
+
+
+#open {
+  font-size: 2.5rem;
+  cursor: pointer;
+}
+
+
+
+/* メニュー */
+.overlay {
+  background: rgba(26, 26, 26, 0.87);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+  opacity: 0;
+  pointer-events: none;
+  z-index: 10;
+}
+
+.overlay #close {
+  color: white;
+  font-size: 2.5rem;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-right: 80px;
+}
+
+.overlay  nav {
+  margin-top: 30px;
+}
+
+.overlay li a {
+  color: white;
+  font-size: 0.9rem;
+  line-height: 2.5;
+}
+
+/* メニューｊｓ */
+.overlay.show {
+  opacity: 1;
+  pointer-events: auto;
+  
+}
+
+#nav.move {
+  animation: popmenu 0.3s;
+}
+
+@keyframes popmenu {
+  0% {
+    transform: translateX(-80px);
+    transition-timing-function: ease-in-out;
+  }
+  100% {
+    transform: none;
+  }
+}
+
+#open.hide {
+  display: none;
+}
+
+.map.pic {
+ pointer-events: none;
+ z-index: 0;
+}
+
+/* メイン */
+main {
+  padding: 80px 0;
+}
+
+.main ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.main li {
+  width: 23%;
+  margin-bottom: 38px;
+}
+
+.main li p {
+  margin-top: 5px;
+}
+
+.btn {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-bottom: 45px;
+}
+
+
+/* フッター */
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20px;
+}
+
+footer .info ul {
+  display: flex;
+}
+
+footer .info li {
+  margin-right: 30px;
+}
+
+footer p {
+  font-size: 0.6rem;
+}
+
+/* ぷろだくとｈｔｍｌ */
+/* メイン */
+main > p {
+  font-size: 0.9rem;
+  padding: 35px 0;
+}
+
+.page ul {
+  display: flex;
+  justify-content: center;
+}
+
+.page ul li {
+padding: 0 20px;
+}
+
+/* アイテムｈｔｍｌ */
+.product {
+  width: 800px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.product .item-photo {
+  width: 50%;
+}
+
+.item-text {
+  width: 42%;
+  font-size: 0.9rem;
+}
+
+.item-text p {
+  padding-bottom: 30px;
+}
+
+.item-text dl {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-text dt {
+  width: 30%;
+}
+
+.item-text dd {
+  width: 60%;
+}
+
+.back-btn {
+  text-align: center;
+  font-size: 0.9rem;
+  margin-top: 60px;
+}
+
+/* アバウト */
+.prof {
+  width: 600px;
+  padding: 120px 0;
+  font-size: 0.9rem;
+}
+
+.about-text p {
+  margin-bottom: 30px;
+  line-height: 2;
+}
+
+/* カンパニー */
+.company-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.company-info dt {
+  width: 30%;
+  padding: 18px 0;
+  border-bottom: solid 1px #9b9696a8;
+
+}
+
+.company-info dd {
+  width: 70%;
+  padding: 18px 0;
+  border-bottom: solid 1px #9b9696a8;
+}
+
+.company-info dt:last-of-type,
+.company-info dd:last-of-type {
+  border: none;
+}
+
+.map {
+  margin-top: 20px;
+  filter: grayscale(1);
+}
+
+.map iframe {
+  width: 100%;
+  height: 300px;
+  border: none;
+  overflow: hidden;
+  background-color: transparent;
+}
+
+
+/* sp版 */
+@media screen and (max-width: 900px) {
+  .site-title {
+    position: absolute;
+    top: 30px;
+    left: 40px;
+  }
+
+  .menu {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+  }
+
+  #close {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+
+  .main ul {
+    flex-flow: row wrap;
+    width: 100%;
+  }
+
+  .main ul li {
+    width: 47%;
+  }
+
+  /* アバウト */
+  .prof {
+    width: 100%;
+  }
+
+  .prof > p {
+    padding-top: 10px;
+  }
+
+  /* カンパニー */
+  .company-info {
+    flex-direction: column;
+    
+  }
+
+  .company-info dt {
+    
+    border: none;
+    padding-bottom: 0;
+  }
+
+  .company-info dd {
+    padding-top: 7px;
+    width: 100%;
+  }
+}
+
+
+
+
+
+
+
+
+
