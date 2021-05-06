@@ -289,8 +289,8 @@ padding: 0 20px;
 @media screen and (max-width: 900px) {
   .site-title {
     position: absolute;
-    top: 30px;
-    left: 40px;
+    top: 0;
+    left: 20px;
   }
 
   .menu {
